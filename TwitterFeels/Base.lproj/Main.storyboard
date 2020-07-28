@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uS3-3d-gE9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="n34-wf-av6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="uS3-3d-gE9" customClass="ViewController" customModule="Twittermenti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LbX-LV-jKt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZr-ge-pPF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="JMV-7Q-2kG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzo-6D-KSt">
+                                                <rect key="frame" x="153" y="0.0" width="108" height="652"/>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do people feel about..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkv-Md-BLd">
+                                                <rect key="frame" x="0.0" y="707" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8Sx-jn-hCq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUN-Zn-xuV">
+                                                <rect key="frame" x="157.5" y="812" width="99" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="uAf-YE-mz7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Predict!">
+                                                    <color key="titleColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="predictPressed:" destination="uS3-3d-gE9" eventType="touchUpInside" id="HfA-QU-dhV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Lkv-Md-BLd" secondAttribute="trailing" id="6Dh-Qd-1Ji"/>
+                                            <constraint firstItem="Lkv-Md-BLd" firstAttribute="leading" secondItem="JMV-7Q-2kG" secondAttribute="leading" id="BDI-Mz-82e"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JMV-7Q-2kG" secondAttribute="bottom" id="9b8-ge-LNZ"/>
+                                    <constraint firstItem="JMV-7Q-2kG" firstAttribute="top" secondItem="eZr-ge-pPF" secondAttribute="top" id="BBb-wm-G3f"/>
+                                    <constraint firstItem="JMV-7Q-2kG" firstAttribute="leading" secondItem="eZr-ge-pPF" secondAttribute="leading" id="VlT-yh-aQ9"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMV-7Q-2kG" secondAttribute="trailing" id="dF8-bz-eEi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eZr-ge-pPF" firstAttribute="top" secondItem="LbX-LV-jKt" secondAttribute="top" id="6a1-WS-JVT"/>
+                            <constraint firstItem="eZr-ge-pPF" firstAttribute="trailing" secondItem="y5O-Zo-tqG" secondAttribute="trailing" id="9ux-lE-yOe"/>
+                            <constraint firstItem="eZr-ge-pPF" firstAttribute="bottom" secondItem="y5O-Zo-tqG" secondAttribute="bottom" id="j1B-Wf-eWm"/>
+                            <constraint firstItem="eZr-ge-pPF" firstAttribute="leading" secondItem="y5O-Zo-tqG" secondAttribute="leading" id="lAL-4d-80A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y5O-Zo-tqG"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="eZr-ge-pPF" id="Kr7-1C-ZMh"/>
+                        <outlet property="sentimentLabel" destination="nzo-6D-KSt" id="yt7-oy-FAh"/>
+                        <outlet property="textField" destination="Lkv-Md-BLd" id="Tbx-Ja-adV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsh-VR-ybp" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="890" y="139"/>
         </scene>
     </scenes>
 </document>
