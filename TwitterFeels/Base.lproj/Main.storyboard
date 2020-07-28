@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="n34-wf-av6">
             <objects>
-                <viewController id="uS3-3d-gE9" customClass="ViewController" customModule="Twittermenti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uS3-3d-gE9" customClass="ViewController" customModule="TwitterFeels" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LbX-LV-jKt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,6 @@
                         <viewLayoutGuide key="safeArea" id="y5O-Zo-tqG"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="eZr-ge-pPF" id="Kr7-1C-ZMh"/>
                         <outlet property="sentimentLabel" destination="nzo-6D-KSt" id="yt7-oy-FAh"/>
                         <outlet property="textField" destination="Lkv-Md-BLd" id="Tbx-Ja-adV"/>
                     </connections>

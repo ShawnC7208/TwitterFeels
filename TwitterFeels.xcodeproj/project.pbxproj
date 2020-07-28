@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		1929151924C8FDA900892E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1929151824C8FDA900892E1B /* Assets.xcassets */; };
 		1929151C24C8FDA900892E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */; };
 		19C1629F24CFC900005890ED /* TweetSentimentClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */; };
+		19C162A224D075C5005890ED /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 19C162A124D075C5005890ED /* Swifter */; };
+		19C162A424D07B33005890ED /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19C162A324D07B33005890ED /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		1929151B24C8FDA900892E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1929151D24C8FDA900892E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifer.mlmodel; sourceTree = SOURCE_ROOT; };
+		19C162A324D07B33005890ED /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C162A224D075C5005890ED /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */,
 				1929151D24C8FDA900892E1B /* Info.plist */,
 				19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */,
+				19C162A324D07B33005890ED /* Secrets.plist */,
 			);
 			path = TwitterFeels;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = TwitterFeels;
+			packageProductDependencies = (
+				19C162A124D075C5005890ED /* Swifter */,
+			);
 			productName = TwitterFeels;
 			productReference = 1929150C24C8FDA700892E1B /* TwitterFeels.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 1929150324C8FDA700892E1B;
+			packageReferences = (
+				19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */,
+			);
 			productRefGroup = 1929150D24C8FDA700892E1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C162A424D07B33005890ED /* Secrets.plist in Resources */,
 				1929151C24C8FDA900892E1B /* LaunchScreen.storyboard in Resources */,
 				1929151924C8FDA900892E1B /* Assets.xcassets in Resources */,
 				1929151724C8FDA700892E1B /* Main.storyboard in Resources */,
@@ -342,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattdonnelly/Swifter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19C162A124D075C5005890ED /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1929150424C8FDA700892E1B /* Project object */;
 }
