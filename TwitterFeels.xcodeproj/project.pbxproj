@@ -13,6 +13,7 @@
 		1929151724C8FDA700892E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1929151524C8FDA700892E1B /* Main.storyboard */; };
 		1929151924C8FDA900892E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1929151824C8FDA900892E1B /* Assets.xcassets */; };
 		1929151C24C8FDA900892E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */; };
+		19C1629F24CFC900005890ED /* TweetSentimentClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1929151824C8FDA900892E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1929151B24C8FDA900892E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1929151D24C8FDA900892E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifer.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1929151824C8FDA900892E1B /* Assets.xcassets */,
 				1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */,
 				1929151D24C8FDA900892E1B /* Info.plist */,
+				19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */,
 			);
 			path = TwitterFeels;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				1929151424C8FDA700892E1B /* ViewController.swift in Sources */,
 				1929151024C8FDA700892E1B /* AppDelegate.swift in Sources */,
 				1929151224C8FDA700892E1B /* SceneDelegate.swift in Sources */,
+				19C1629F24CFC900005890ED /* TweetSentimentClassifer.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
