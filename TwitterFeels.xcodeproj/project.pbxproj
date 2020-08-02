@@ -14,8 +14,10 @@
 		1929151924C8FDA900892E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1929151824C8FDA900892E1B /* Assets.xcassets */; };
 		1929151C24C8FDA900892E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */; };
 		19C1629F24CFC900005890ED /* TweetSentimentClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */; };
-		19C162A224D075C5005890ED /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 19C162A124D075C5005890ED /* Swifter */; };
+		19C162A224D075C5005890ED /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 19C162A124D075C5005890ED /* SwiftPackageProductDependency */; };
 		19C162A424D07B33005890ED /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19C162A324D07B33005890ED /* Secrets.plist */; };
+		19C162A924D1D878005890ED /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C162A824D1D878005890ED /* Tweet.swift */; };
+		33921CAA7245078899634191 /* Pods_TwitterFeels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02BB73954372A369B6A61EE /* Pods_TwitterFeels.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		1929151D24C8FDA900892E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19C1629E24CFC900005890ED /* TweetSentimentClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifer.mlmodel; sourceTree = SOURCE_ROOT; };
 		19C162A324D07B33005890ED /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		19C162A824D1D878005890ED /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		574F1860685C5CBC76BBEBC4 /* Pods-TwitterFeels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeels.debug.xcconfig"; path = "Target Support Files/Pods-TwitterFeels/Pods-TwitterFeels.debug.xcconfig"; sourceTree = "<group>"; };
+		A02BB73954372A369B6A61EE /* Pods_TwitterFeels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterFeels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AB88E9D3351B0F4DDC3970 /* Pods-TwitterFeels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeels.release.xcconfig"; path = "Target Support Files/Pods-TwitterFeels/Pods-TwitterFeels.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,18 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C162A224D075C5005890ED /* Swifter in Frameworks */,
+				19C162A224D075C5005890ED /* BuildFile in Frameworks */,
+				33921CAA7245078899634191 /* Pods_TwitterFeels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13110D1045D41F6C2D196CF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A02BB73954372A369B6A61EE /* Pods_TwitterFeels.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1929150324C8FDA700892E1B = {
 			isa = PBXGroup;
 			children = (
 				1929150E24C8FDA700892E1B /* TwitterFeels */,
 				1929150D24C8FDA700892E1B /* Products */,
+				77D5AD0FFD82FD79E0A42B42 /* Pods */,
+				13110D1045D41F6C2D196CF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,8 +81,9 @@
 			children = (
 				1929150F24C8FDA700892E1B /* AppDelegate.swift */,
 				1929151124C8FDA700892E1B /* SceneDelegate.swift */,
-				1929151324C8FDA700892E1B /* ViewController.swift */,
-				1929151524C8FDA700892E1B /* Main.storyboard */,
+				19C162A724D1D717005890ED /* Model */,
+				19C162A524D1D6F8005890ED /* View */,
+				19C162A624D1D708005890ED /* Controller */,
 				1929151824C8FDA900892E1B /* Assets.xcassets */,
 				1929151A24C8FDA900892E1B /* LaunchScreen.storyboard */,
 				1929151D24C8FDA900892E1B /* Info.plist */,
@@ -75,6 +93,40 @@
 			path = TwitterFeels;
 			sourceTree = "<group>";
 		};
+		19C162A524D1D6F8005890ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1929151524C8FDA700892E1B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19C162A624D1D708005890ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1929151324C8FDA700892E1B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19C162A724D1D717005890ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19C162A824D1D878005890ED /* Tweet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77D5AD0FFD82FD79E0A42B42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				574F1860685C5CBC76BBEBC4 /* Pods-TwitterFeels.debug.xcconfig */,
+				D2AB88E9D3351B0F4DDC3970 /* Pods-TwitterFeels.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1929152024C8FDA900892E1B /* Build configuration list for PBXNativeTarget "TwitterFeels" */;
 			buildPhases = (
+				126D88EDA078917ECDCDDC2D /* [CP] Check Pods Manifest.lock */,
 				1929150824C8FDA700892E1B /* Sources */,
 				1929150924C8FDA700892E1B /* Frameworks */,
 				1929150A24C8FDA700892E1B /* Resources */,
+				03C46BBCFA7C8EACB9816E93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -92,7 +146,7 @@
 			);
 			name = TwitterFeels;
 			packageProductDependencies = (
-				19C162A124D075C5005890ED /* Swifter */,
+				19C162A124D075C5005890ED /* SwiftPackageProductDependency */,
 			);
 			productName = TwitterFeels;
 			productReference = 1929150C24C8FDA700892E1B /* TwitterFeels.app */;
@@ -123,7 +177,7 @@
 			);
 			mainGroup = 1929150324C8FDA700892E1B;
 			packageReferences = (
-				19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */,
+				19C162A024D075C5005890ED /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 1929150D24C8FDA700892E1B /* Products */;
 			projectDirPath = "";
@@ -148,12 +202,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03C46BBCFA7C8EACB9816E93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwitterFeels/Pods-TwitterFeels-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwitterFeels/Pods-TwitterFeels-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterFeels/Pods-TwitterFeels-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		126D88EDA078917ECDCDDC2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwitterFeels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1929150824C8FDA700892E1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1929151424C8FDA700892E1B /* ViewController.swift in Sources */,
+				19C162A924D1D878005890ED /* Tweet.swift in Sources */,
 				1929151024C8FDA700892E1B /* AppDelegate.swift in Sources */,
 				1929151224C8FDA700892E1B /* SceneDelegate.swift in Sources */,
 				19C1629F24CFC900005890ED /* TweetSentimentClassifer.mlmodel in Sources */,
@@ -298,6 +395,7 @@
 		};
 		1929152124C8FDA900892E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574F1860685C5CBC76BBEBC4 /* Pods-TwitterFeels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +414,7 @@
 		};
 		1929152224C8FDA900892E1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2AB88E9D3351B0F4DDC3970 /* Pods-TwitterFeels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -356,7 +455,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */ = {
+		19C162A024D075C5005890ED /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mattdonnelly/Swifter.git";
 			requirement = {
@@ -367,9 +466,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		19C162A124D075C5005890ED /* Swifter */ = {
+		19C162A124D075C5005890ED /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 19C162A024D075C5005890ED /* XCRemoteSwiftPackageReference "Swifter" */;
+			package = 19C162A024D075C5005890ED /* RemoteSwiftPackageReference */;
 			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
